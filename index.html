@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#180b13" />
+  <meta name="description" content="هدية حب خاصة من رمضان إلى منه" />
+  <title>رمضان & منه — حكايتنا ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#10090e;--panel:rgba(53,25,38,.72);--panel2:rgba(82,38,56,.52);--pink:#ff4f83;--pink2:#ff7199;--wine:#7e183d;--text:#fff7fa;--muted:#d6b9c5;--gold:#ffd35d;--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#050306;color:var(--text);font-family:Cairo,Tajawal,sans-serif;overflow-x:hidden}
+    button{font:inherit} .app{width:100%;min-height:100vh;max-width:520px;margin:auto;background:radial-gradient(circle at 50% 0,#4c142c 0,#1d0b16 30%,#0c070b 75%);position:relative;overflow:hidden}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+    .glow{position:fixed;width:330px;height:330px;border-radius:50%;background:#ff2864;filter:blur(120px);opacity:.18;top:-150px;right:-120px;pointer-events:none}.glow.two{top:42%;left:-190px;background:#9b285e;opacity:.12}
+    .intro{position:fixed;z-index:50;inset:0;background:radial-gradient(circle at 50% 30%,#5c1937,#170a12 55%,#090508);display:flex;align-items:center;justify-content:center;padding:22px;transition:.65s ease}
+    .intro.hide{opacity:0;visibility:hidden;transform:scale(1.05)} .intro-card{text-align:center;width:min(410px,100%)}
+    .pill{display:inline-flex;gap:7px;align-items:center;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:8px 15px;border-radius:30px;font-size:12px;color:#ffe9f0;margin-bottom:24px;backdrop-filter:blur(10px)}
+    .gift{width:180px;height:145px;margin:0 auto 28px;position:relative;filter:drop-shadow(0 18px 30px rgba(255,40,100,.22));animation:float 3s ease-in-out infinite}.gift-box{position:absolute;left:15px;right:15px;bottom:0;height:105px;border-radius:18px;background:linear-gradient(145deg,#ff7095,#f52f68);box-shadow:inset 0 -10px 18px rgba(100,0,30,.12)}.gift-lid{position:absolute;left:0;right:0;top:24px;height:38px;border-radius:13px;background:linear-gradient(145deg,#ff85a6,#f4386e);transform:rotate(-3deg)}.ribbon-v{position:absolute;top:24px;bottom:0;width:25px;left:calc(50% - 12px);background:#ffd75a}.bow{position:absolute;top:0;left:50%;width:75px;height:55px;transform:translateX(-50%)}.bow:before,.bow:after{content:"";position:absolute;top:10px;width:44px;height:35px;background:#ffd75a;border-radius:50% 50% 12px 50%;border:5px solid #e9b83c}.bow:before{right:31px;transform:rotate(28deg)}.bow:after{left:31px;transform:scaleX(-1) rotate(28deg)}
+    @keyframes float{50%{transform:translateY(-8px)}}
+    h1,h2,h3,p{margin:0}.intro h1{font-size:33px;line-height:1.35;margin-bottom:8px}.intro-sub{color:var(--muted);font-size:13px;line-height:1.9;margin:0 auto 25px;max-width:330px}.open-btn{border:0;border-radius:17px;background:linear-gradient(135deg,#ff416f,#ff638e);color:#fff;font-weight:800;padding:15px 24px;width:min(320px,100%);box-shadow:0 15px 35px rgba(255,55,110,.25);cursor:pointer}.open-btn:active{transform:scale(.98)}
+    header{position:sticky;top:0;z-index:15;padding:13px 14px 9px;background:linear-gradient(180deg,rgba(26,10,18,.94),rgba(26,10,18,.74),transparent);backdrop-filter:blur(9px)}.top{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:600;font-size:24px;letter-spacing:.2px;color:#f1a4bd;text-shadow:0 2px 12px rgba(241,164,189,.18)}.brand small{display:none}.icon-btn{width:39px;height:39px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:#fff;display:grid;place-items:center}.pause{font-size:14px}.heart{color:#ff718f}
+    main{padding:4px 13px 104px}.section{display:none;animation:enter .35s ease}.section.active{display:block}@keyframes enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+    .hero{text-align:center;padding:15px 8px 8px}.eyebrow{font-size:11px;color:#ff9db8;margin-bottom:5px}.hero h2{font-size:26px}.hero p{color:var(--muted);font-size:12px;line-height:1.8;margin-top:6px}.date-card{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.info{padding:14px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(104,48,69,.52),rgba(40,20,30,.65));border-radius:18px;box-shadow:inset 0 1px rgba(255,255,255,.05)}.info .big{font-size:14px;font-weight:800}.info small{display:block;color:#c7aab7;font-size:9px;margin-top:4px}.counter-title{font-size:15px;font-weight:800;margin:21px 4px 10px}.counter{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.count{border-radius:16px;border:1px solid var(--line);background:rgba(61,28,43,.65);padding:12px 6px;text-align:center}.count strong{font-size:19px}.count span{display:block;color:#c9aebb;font-size:9px;margin-top:2px}
+    .quote{margin-top:15px;border-radius:18px;padding:18px;background:linear-gradient(135deg,#6c2948,#3a1a2a);border:1px solid rgba(255,255,255,.1);text-align:center;position:relative;overflow:hidden}.quote:after{content:"♥";position:absolute;left:12px;bottom:-10px;font-size:60px;color:rgba(255,255,255,.04)}.quote h3{font-size:14px;margin-bottom:7px}.quote p{font-size:11px;color:#ecd8df;line-height:2}
+    .section-head{margin:12px 3px 14px}.section-head h2{font-size:21px}.section-head p{font-size:10px;color:#ba9ca9;margin-top:3px}.cards{display:grid;gap:10px}.reason,.message,.memory{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(83,39,57,.72),rgba(33,18,27,.78));padding:15px;box-shadow:0 10px 24px rgba(0,0,0,.14)}.reason{display:flex;gap:12px;align-items:center;cursor:pointer}.reason .emoji{width:38px;height:38px;border-radius:12px;background:rgba(255,208,73,.12);display:grid;place-items:center;font-size:19px}.reason b{font-size:12px}.reason p,.message p,.memory p{font-size:10px;line-height:1.9;color:#cbb1bc;margin-top:4px}.reason:not(.open) p{display:none}.reason.open p{display:block}.reason:not(.open)::after{content:"🤍 افتحيني";font-size:9px;color:#d6bdc7;margin-top:8px}.reason.open::after{content:"💗 اضغطي للإخفاء";font-size:9px;color:#d6bdc7;margin-top:8px}.reason.open p{font-size:13px;line-height:2.15;color:#ead9df}.message{min-height:125px;cursor:pointer;display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center}.message .micon{font-size:24px;margin-bottom:8px}.message strong{font-size:13px}.message:not(.open) p{display:none}.message.open p{display:block}.message:not(.open)::after{content:"💌 افتحيني";font-size:9px;color:#d6bdc7;margin-top:8px}.message.open::after{content:"✨ اضغطي للإخفاء";font-size:9px;color:#d6bdc7;margin-top:8px}.reason:not(.open)::after,.message:not(.open)::after{font-weight:600;letter-spacing:.2px}
+#promises .reason:nth-child(1):not(.open)::after{content:"🤍 افتحيني"}
+#promises .reason:nth-child(2):not(.open)::after{content:"🛡️ افتحيني"}
+#promises .reason:nth-child(3):not(.open)::after{content:"🌹 افتحيني"}
+#promises .reason:nth-child(4):not(.open)::after{content:"😊 افتحيني"}
+#messages .message:nth-child(1):not(.open)::after{content:"💌 افتحيني"}
+#messages .message:nth-child(2):not(.open)::after{content:"⭐ افتحيني"}
+#messages .message:nth-child(3):not(.open)::after{content:"👑 افتحيني"}
+#messages .message:nth-child(4):not(.open)::after{content:"🌷 افتحيني"}
+.message.highlight{background:linear-gradient(145deg,#ff4e82,#d92760);border-color:rgba(255,255,255,.16);color:white}.message.highlight p{color:#fff0f4}.memory{padding:8px;overflow:hidden}.memory img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:13px;background:linear-gradient(135deg,#6b2846,#22111a)}.memory figcaption{padding:9px 5px 5px;font-size:10px;color:#d6bdc7;text-align:center}.photo-placeholder{aspect-ratio:4/5;border-radius:13px;display:grid;place-items:center;text-align:center;padding:25px;background:radial-gradient(circle at 50% 35%,#6d2949,#25131d 70%);color:#e7cbd5;font-size:12px}.photo-placeholder span{display:block;font-size:36px;margin-bottom:8px}
+    .love-note{background:linear-gradient(145deg,#ff4c7e,#d82d61);border-radius:20px;padding:23px 19px;line-height:2.05;text-align:center;font-size:13px;box-shadow:0 16px 30px rgba(255,47,103,.16)}.signature{margin-top:14px;font-weight:800;font-size:12px}.final{text-align:center;padding:25px 10px}.brand-signature{margin-top:28px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:10px;letter-spacing:.2px;color:#bfa5af;opacity:.9}.brand-signature span{color:#ff7199;font-size:13px}.brand-signature b{color:#f1a4bd;font-weight:600}.final .big-heart{font-size:42px;animation:beat 1.2s infinite}.final h2{font-size:22px;margin:5px 0}.final p{font-size:11px;color:#cdb0bc;line-height:1.9}@keyframes beat{50%{transform:scale(1.12)}}
+
+    .socials{margin-top:18px;padding:15px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.035)}.social-title{font-size:10px;color:#cdb4bf;margin-bottom:10px}.social-links{display:grid;grid-template-columns:1fr 1fr;gap:9px}.social-links a{display:flex;align-items:center;gap:9px;padding:10px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.045);color:#fff;text-decoration:none;text-align:right}.social-links a>span{width:31px;height:31px;border-radius:10px;background:rgba(255,113,153,.12);display:grid;place-items:center;color:#ff9db8;font-size:18px}.social-links b{display:block;font-size:10px}.social-links small{display:block;font-size:8px;color:#a9929d;margin-top:2px;direction:ltr;text-align:right}
+    .bottom{position:fixed;z-index:20;bottom:12px;left:50%;transform:translateX(-50%);width:min(492px,calc(100% - 24px));display:grid;grid-template-columns:repeat(5,1fr);padding:7px;border-radius:21px;border:1px solid rgba(255,255,255,.13);background:rgba(25,14,20,.86);backdrop-filter:blur(15px);box-shadow:0 15px 40px rgba(0,0,0,.4)}.nav{border:0;background:transparent;color:#bca4ae;padding:6px 2px;border-radius:15px;font-size:9px;cursor:pointer}.nav span{display:block;font-size:17px;margin-bottom:2px}.nav.active{background:rgba(255,80,130,.14);color:#fff}.nav.active span{filter:drop-shadow(0 0 6px rgba(255,80,130,.45))}
+    .particles{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}.particle{position:absolute;color:#ff668e;opacity:.5;font-size:12px;animation:rise linear infinite}.star{color:#ffd96a}@keyframes rise{from{transform:translateY(105vh) rotate(0);opacity:0}15%{opacity:.6}to{transform:translateY(-15vh) rotate(260deg);opacity:0}}
+    @media(min-width:700px){body{background:#020103}.app{box-shadow:0 0 70px rgba(255,50,100,.1);min-height:100vh}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <div class="glow"></div><div class="glow two"></div><div class="noise"></div><div class="particles" id="particles"></div>
+  <div class="intro" id="intro"><div class="intro-card">
+    <div class="pill">🎁 مفاجأة صغيرة ليكي</div>
+    <div class="gift"><div class="bow"></div><div class="gift-lid"></div><div class="gift-box"></div><div class="ribbon-v"></div></div>
+    <h1>لمنه من رمضان ❤️</h1><p class="intro-sub">كل حكاية حلوة بيبقى ليها أول يوم… ودي حكايتنا من يوم 25 نوفمبر 2025.</p>
+    <button class="open-btn" id="openBtn">❤️ افتحي الهدية يا منه</button>
+  </div></div>
+  <audio id="loveSong" preload="auto" src="hob_hayaty.mp3"></audio>
+  <header><div class="top"><button class="icon-btn pause" id="pauseBtn" aria-label="تشغيل وإيقاف الموسيقى" title="الموسيقى">▶</button><div class="brand" aria-label="لحظتي Lahzaty">لحظتي · Lahzaty</div><button class="icon-btn heart">♥</button></div></header>
+  <main>
+    <section class="section active" id="home"><div class="hero"><div class="eyebrow">من يوم ما بدأت حكايتنا</div><h2>رمضان ❤️ منه</h2><p>يمكن التاريخ رقم… بس بالنسبالي هو بداية أجمل حاجة حصلتلي.</p></div>
+      <div class="date-card"><div class="info"><div class="big">25 نوفمبر 2025</div><small>اليوم اللي بدأت فيه حكايتنا</small></div><div class="info"><div class="big">🎵 أغنيتنا</div><small>مقطوعة رومانسية مصرية — اضغطي ▶</small></div></div>
+      <div class="counter-title">منذ أن بدأت القصة</div><div class="counter" id="counter"></div>
+      <div class="quote"><h3>🎧 وعدي ليكي</h3><p>هفضل جنبك في الحلوة والمرة، وأفضل أختارِك كل يوم من جديد.</p></div>
+    </section>
+    <section class="section" id="promises"><div class="section-head"><h2>وعدي ليكي 💗</h2><p>حاجات بسيطة بس من قلبي</p></div><div class="cards">
+      <article class="reason"><div class="emoji">🤍</div><div><b>هفضل سندك</b><p>مش بس في وقت الفرح، لكن كمان في الأيام اللي محتاجة حضن وكلمة تطمن.</p></div></article>
+      <article class="reason"><div class="emoji">🛡️</div><div><b>هكون أمانك</b><p>نفسي دايمًا تحسي إن عندك حد تلاقيه وقت ما تحتاجيه.</p></div></article>
+      <article class="reason"><div class="emoji">🌹</div><div><b>حبي ليكي ثابت</b><p>كل يوم أعرفك أكتر، وكل يوم بلاقي سبب جديد أحبك عشانه.</p></div></article>
+      <article class="reason"><div class="emoji">😊</div><div><b>هضحكك حتى في أصعب يوم</b><p>لأن ضحكتك بالنسبالي واحدة من أحلى الحاجات في الدنيا.</p></div></article>
+    </div></section>
+    <section class="section" id="messages"><div class="section-head"><h2>رسائل صغيرة 💌</h2><p>مكتوبة مخصوص عشانك</p></div><div class="cards">
+      <article class="message"><div class="micon">✉️</div><strong>للحب</strong><p>وجودك في حياتي مش صدفة عابرة… إنتِ الحتة الحلوة اللي نفسي تفضل.</p></article>
+      <article class="message"><div class="micon">⭐</div><strong>لمنه</strong><p>لو الدنيا اتغيرت، نفسي الحاجة الوحيدة اللي متتغيرش هي مكانك عندي.</p></article>
+      <article class="message"><div class="micon">👑</div><strong>لأجمل واحدة</strong><p>إنتِ مش بس حبيبتي، إنتِ الشخص اللي بحب أحكيله كل تفاصيل يومي.</p></article>
+      <article class="message highlight"><strong>إنتِ أجمل لمسة في حكايتي ✨</strong><p>ومهما كتبت، لسه الكلام أقل من اللي جوايا.</p></article>
+    </div></section>
+    <section class="section" id="memories"><div class="section-head"><h2>ذكرياتنا 📸</h2><p>هنا هنحط صورنا واحدة واحدة</p></div><div class="cards">
+      <figure class="memory"><img src="https://images.unsplash.com/photo-1692991812506-9d365d755bdc?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="صورة رومانسية" loading="lazy"><figcaption>بداية ذكرياتنا ❤️</figcaption></figure>
+      <figure class="memory"><img src="https://images.unsplash.com/photo-1768468312767-d090f64ce92c?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="صورة رومانسية" loading="lazy"><figcaption>تفاصيل صغيرة بتفضل في القلب</figcaption></figure>
+      <figure class="memory"><img src="https://images.unsplash.com/photo-1764148774308-6850a48448ec?auto=format&fit=crop&fm=jpg&q=82&w=900" alt="صورة رومانسية" loading="lazy"><figcaption>والأجمل لسه جاي</figcaption></figure>
+    </div></section>
+    <section class="section" id="love"><div class="section-head"><h2>رسالة ليكي ❤️</h2><p>من رمضان إلى منه</p></div><div class="love-note">يا منه…<br><br>من يوم 25/11/2025 وأنا شايف إن التاريخ ده مش مجرد تاريخ. ده اليوم اللي بدأت فيه حكاية خلت أيامي ليها معنى مختلف.<br><br>يمكن مش بعرف أقول كل اللي جوايا كل مرة، بس الحقيقة إن وجودك فرق معايا، وخلاني أتمنى إن كل الأيام اللي جاية يكون ليكي فيها مكان كبير.<br><br>عايز أفضل أشوف ضحكتك، وأسمع حكاياتك، وأعيش معاكي تفاصيل صغيرة تبقى بعد كده أجمل ذكرياتنا.<br><br>بحبك يا منه، وربنا يخليكي ليا ❤️<div class="signature">— رمضان</div></div><div class="final"><div class="big-heart">♥</div><h2>دي حكايتنا…</h2><p>والحلو فيها إننا لسه في أول الفصول.</p></div><div class="brand-signature">صُنعت بحب <span>♡</span> من <b>لحظتي | Lahzaty</b></div><div class="socials"><div class="social-title">تابعونا على السوشيال ❤️</div><div class="social-links"><a href="https://www.instagram.com/lahzaty.web?stkn=Z282c3VkcHdjNzZy" target="_blank" rel="noopener" aria-label="Instagram"><span>◎</span><div><b>Instagram</b><small>@lahzaty.web</small></div></a><a href="https://www.tiktok.com/@lahzaty.web?_r=1&_t=ZS-9AN6jrG04QP" target="_blank" rel="noopener" aria-label="TikTok"><span>♪</span><div><b>TikTok</b><small>@lahzaty.web</small></div></a></div></div></section>
+  </main>
+  <nav class="bottom"><button class="nav active" data-target="home"><span>⌂</span>الرئيسية</button><button class="nav" data-target="promises"><span>♡</span>وعدي ليكي</button><button class="nav" data-target="messages"><span>▣</span>رسائل</button><button class="nav" data-target="memories"><span>▧</span>صورنا</button><button class="nav" data-target="love"><span>♥</span>رسالة</button></nav>
+</div>
+<script>
+const start=new Date('2025-11-25T00:00:00');
+function updateCounter(){const now=new Date();let ms=Math.max(0,now-start);let sec=Math.floor(ms/1000);let days=Math.floor(sec/86400);sec%=86400;let hours=Math.floor(sec/3600);sec%=3600;let mins=Math.floor(sec/60);document.getElementById('counter').innerHTML=`<div class="count"><strong>${days}</strong><span>يوم</span></div><div class="count"><strong>${hours}</strong><span>ساعة</span></div><div class="count"><strong>${mins}</strong><span>دقيقة</span></div><div class="count"><strong>${Math.floor(ms/1000)%60}</strong><span>ثانية</span></div><div class="count"><strong>${start.getDate()}</strong><span>يوم البداية</span></div><div class="count"><strong>${start.getFullYear()}</strong><span>سنة البداية</span></div>`}updateCounter();setInterval(updateCounter,1000);
+const intro=document.getElementById('intro');
+const song=document.getElementById('loveSong');
+let musicPlaying=false;
+function startMusic(){
+  song.volume=.72;
+  const play=song.play();
+  if(play&&play.catch)play.catch(()=>{});
+  musicPlaying=true;
+  document.getElementById('pauseBtn').textContent='Ⅱ';
+}
+function stopMusic(){
+  song.pause();
+  musicPlaying=false;
+  document.getElementById('pauseBtn').textContent='▶';
+}
+document.getElementById('openBtn').onclick=()=>{intro.classList.add('hide');document.body.style.overflow='auto';startMusic()};
+const navs=[...document.querySelectorAll('.nav')], sections=[...document.querySelectorAll('.section')];navs.forEach(n=>n.onclick=()=>{navs.forEach(x=>x.classList.remove('active'));n.classList.add('active');sections.forEach(s=>s.classList.toggle('active',s.id===n.dataset.target));window.scrollTo({top:0,behavior:'smooth'})});document.querySelectorAll('.message,.reason').forEach(m=>m.addEventListener('click',()=>m.classList.toggle('open')));
+document.getElementById('pauseBtn').onclick=()=>{if(musicPlaying)stopMusic();else startMusic()};
+const p=document.getElementById('particles');for(let i=0;i<28;i++){const s=document.createElement('span');s.className='particle '+(Math.random()>.72?'star':'');s.textContent=Math.random()>.25?'♥':'✦';s.style.left=Math.random()*100+'%';s.style.animationDuration=(7+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*15)+'s';s.style.fontSize=(8+Math.random()*9)+'px';p.appendChild(s)}
+</script>
+</body></html>
